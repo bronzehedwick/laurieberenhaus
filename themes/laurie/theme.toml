@@ -1,0 +1,8 @@
+name = "Laurie"
+description = "Theme for Laurie Berenhaus' portfolio"
+homepage = "https://laurieberenhaus.com/"
+min_version = "0.41"
+
+[author]
+  name = "Chris DeLuca"
+  homepage = "https://www.chrisdeluca.me"
