@@ -7,11 +7,15 @@
   {{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}
-  <ul>
+  <div class="artworks">
   {{ range $paginator.Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ $artworkResource := .Page.Resources.GetMatch "the-piece" }}
+    {{ if $artworkResource }}
+      {{ $artworkImage := $artworkResource.Fill "300x300" }}
+      <a href="{{ .Permalink }}"><img src="{{ $artworkImage.RelPermalink }}" alt=""></a>
+    {{ end }}
   {{ end }}
-  </ul>
+  </div>
 
   <footer>
     {{ partial "pagination.html" . }}

@@ -1,3 +1,14 @@
 {{ define "main" }}
-  Wowza
+
+  {{ $paginator := .Paginate .Data.Pages }}
+  <div class="artworks">
+  {{ range $paginator.Pages }}
+    {{ $artworkResource := .Page.Resources.GetMatch "the-piece" }}
+    {{ if $artworkResource }}
+      {{ $artworkImage := $artworkResource.Fill "300x300" }}
+      <a href="{{ .Permalink }}"><img src="{{ $artworkImage.RelPermalink }}" alt=""></a>
+    {{ end }}
+  {{ end }}
+  </div>
+
 {{ end }}

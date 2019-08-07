@@ -2,3 +2,21 @@ baseURL = "https://laurieberenhaus.com/"
 languageCode = "en-us"
 title = "Laurie Berenhaus"
 theme = "laurie"
+
+[[menu.main]]
+  name = "Recent Works"
+  url = "/artwork"
+  weight = 0
+
+[[menu.main]]
+  name = "Bio/CV"
+  url = "/page/bio-cv"
+  weight = 10
+
+[[menu.main]]
+  name = "Contact"
+  url = "/page/contact"
+  weight = 120
+
+[params]
+  description = "Fine artist Laurie Berenhaus' portfolio"

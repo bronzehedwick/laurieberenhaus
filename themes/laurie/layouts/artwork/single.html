@@ -1,0 +1,10 @@
+{{ $artworkResource := .Page.Resources.GetMatch "the-piece" }}
+{{ if $artworkResource }}
+  <img src="{{ $artworkResource.RelPermalink }}" alt="">
+{{ end }}
+
+<p>{{ .Content }}</p>
+
+<footer>
+  <a href="/artwork">Back</a>
+</footer>

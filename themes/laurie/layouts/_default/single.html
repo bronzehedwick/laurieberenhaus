@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+  <section>
+    <header>
+      <h2>
+        {{ if .Params.draft }}<mark>Draft</mark>{{ end }}
+        {{ .Title }}
+      </h2>
+    </header>
+
+    {{ .Content }}
+  </section>
+
+{{ end }}
